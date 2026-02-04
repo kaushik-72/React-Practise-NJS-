@@ -12,4 +12,18 @@ React.createElement("tag<h1><div>" ,  {attributes} ,  child or the data )
 
 if you want to use multiple child , have to declre it in an array []
 
+----------E2-----------
+
+dev dependicies : depend. used in dev mode
+dpendencies: depend. used in production mode.
+
+package.lock.json: keeps the log of all the version of the packages installed
+
+npx parcel index.html // parcel hosts the file to the local server
+
+cdn links for react is not the prefered way of importing react to our project
+
+npm i react or npm install react/dom adds the react module to our project
+
+
 
