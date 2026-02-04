@@ -25,5 +25,13 @@ cdn links for react is not the prefered way of importing react to our project
 
 npm i react or npm install react/dom adds the react module to our project
 
+npm init -y : adds all the remainig (metadata + instructions) that tell npm and other tools how your project behaves
+
+*** scripts are only run with npm never npx
+
+not usefull fact but Error: Each child in a list should have a unique "key" prop.  (while using cdn but it's dpricated)
+
+
+
 
 
