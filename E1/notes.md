@@ -29,7 +29,27 @@ npm init -y : adds all the remainig (metadata + instructions) that tell npm and 
 
 *** scripts are only run with npm never npx
 
-not usefull fact but Error: Each child in a list should have a unique "key" prop.  (while using cdn but it's dpricated)
+not usefull fact but Error: Each child in a list should have a unique "key" prop.  (while using cdn but it's depricated)
+
+why it is not a good way to host our project like go live why we run it in local server ?
+
+why react-cdn links are not used?
+fetching from the cdn is costly experience
+
+for running vite we write npm run dev using the changes made in scripts obj inside package.json what would be the default like for npx.
+
+why do we not track dist file in our github ?
+
+use of build ? npm run build .
+
+how to write img tag inside jsx / various attributes.
+
+
+react component 
+i> class based component (old)
+ii> functional component (new) -> majorly used.
+
+
 
 
 

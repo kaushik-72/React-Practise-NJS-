@@ -26,23 +26,23 @@ import ReactDOM from "react-dom/client";
 
 // --------E3---------
 
-const heading = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    [
-      React.createElement("h1", { id: "child1", key: "h1" }, "I'm a h1 tag"),
-      React.createElement("h2", { id: "child2", key: "h2" }, "I'm a h2 tag")
-    ]
-  )
-);
+// const heading = React.createElement(
+//   "div",
+//   { id: "parent" },
+//   React.createElement(
+//     "div",
+//     { id: "child" },
+//     [
+//       React.createElement("h1", { id: "child1", key: "h1" }, "I'm a h1 tag"),
+//       React.createElement("h2", { id: "child2", key: "h2" }, "I'm a h2 tag")
+//     ]
+//   )
+// );
 
     
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(heading);
 
 
 
@@ -56,3 +56,11 @@ root.render(heading);
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
+
+const heading = React.createElement("h1",{id:"heading"},"hello this is new code")
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(heading)
+
