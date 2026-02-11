@@ -1,119 +1,88 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from "react-dom/client";
 
+
 /**
- * <div id="parent">
- * <div id="child">
- * <h1>I am h1 tag</h1></div>
- * <h2>I am h1 tag</h2></div>
- * </div>
+ * Header
+ * --Logo
+ * --New Items
+ * 
+ * Body
+ * --search
+ * --Restaurant Container
+ *      Restaurant Card
+ *          -Images
+ *          -Name of Restaurant/ Rating/ Location/ Delivery Time
+ * 
+ * Footer
+ * --Copyright
+ * --Links
+ * --Adddress
+ * --Contact
  */
 
+// Header
+const Header = () =>{
+    return(
+        <div className='header'>
+            <div className='logo-container'>
+                <img className='logo' src='https://mir-s3-cdn-cf.behance.net/project_modules/fs/aad4d0110142211.5fe4b63868daa.jpg'/>
+            </div>
+            <div className='nav-items'>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
 
-// const parent = React.createElement(
-//     "div",{id: "parent"},
-//     React.createElement("div",{id: "child"},
-//         React.createElement("h1", {}, "I am h1 tag")
-//     ))
-
-// const parent = React.createElement(
-//     "div",{id: "parent"},
-//     React.createElement("div",{id: "child"},
-//         [React.createElement("h1", {}, "I am h1 tag"), React.createElement("h2", {}, "I am h2 tag")]
-//     ))
-
-//     console.log(parent);
-
-// --------E3---------
-
-// const heading = React.createElement(
-//   "div",
-//   { id: "parent" },
-//   React.createElement(
-//     "div",
-//     { id: "child" },
-//     [
-//       React.createElement("h1", { id: "child1", key: "h1" }, "I'm a h1 tag"),
-//       React.createElement("h2", { id: "child2", key: "h2" }, "I'm a h2 tag")
-//     ]
-//   )
-// );
-
-    
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-
-
-
-// const heading = React.createElement(
-//     "h1", 
-//     {id: "heading", xyz: "abc"}, 
-//     "Hello World"); // this not a heading yet it is an object
-
-//     console.log(heading);
-    
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(heading);
-
-// const heading = React.createElement("h1",{id:"heading"},"hello this is new code")
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// root.render(heading);
-
-//react element
-// const jsxHeading = <h1 id="heading">This is inside JSX</h1>;
-
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// root.render(jsxHeading);
-
-//functional component
-//* component composition
-
-// const Title = ()=>{
-//   <h1 className="head" tabIndex={5}>
-//     Hellof from title
-//   </h1>
-// }
-
-// const HeadingComponent = () => {
-//   <div id="container">
-//     <title>
-//       <h1 className="heading">
-//         Hello from fn comp.
-//       </h1>
-//     </title>
-//   </div>
-// }; 
-const Header =()=>{
+const RestaurantCard = ({resName,rating,foodType,address}) =>{    
 return(
-<div className="header">
-  <div className="logo-contianer">
-    <img src="" alt="logo" className="logo"/>
-  </div>
-  <div className="nav-items">
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contract</li>
-      <li>Cart</li>
-    </ul>
-  </div>
-  </div>
-
+    <div className='res-card' style={{backgroundColor: "#a0c1b9",}}>
+        <img className='res-logo' alt="Wraps Kathi Rolls IMG" src='https://manjulaskitchen.com/wp-content/uploads/vegetable_kathi_roll.jpg'/>
+        <h3>{resName}</h3>
+        <h5>{rating}</h5>
+        <h5>{foodType}</h5>
+        <h5>{address}</h5>
+    </div>
 );
 };
 
-const AppLayout= () => {
-  return <div className="app">
-    <Header/>
-  </div>
+//Body
+const Body = () =>{
+    return(
+        <div className='body'>
+            <div className='search-bar'>Search</div>
+            <div className='res-Container'>
+                <RestaurantCard resName="Wraps Kathi Rolls" rating="4.1 • 30-35 mins" foodType="Rolls & Wraps, Fast Food" address="Noida Sector 62" />
+                <RestaurantCard resName="Burger Culture" rating="4.6 • 25-30 mins" foodType="American, Snacks, Desserts, Beverages" address="Noida Sector 62" />
+                <RestaurantCard resName="Burger King" rating="4.4 • 45-50 mins" foodType="Burgers, American" address="Noida Sector 62" />
+                <RestaurantCard resName="Rolls Mania - Rolls, Wraps & More" rating="4 • 35-40 mins" foodType="Rolls & Wraps, Fast Food, Snacks, Beverages" address="Noida Sector 62" />            </div>
+        </div>
+    )
+}
+
+// Restaurant Container
+
+
+const styleCard = {
+backgroundColor: "#a0c1b9",
 };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const AppLayout = () =>{
+    return(
+        <div className='app'> 
+        {/* Header Body Footer */}
+        <Header/>
+        <Body/>
 
+        </div>
+    )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<AppLayout/>);
-

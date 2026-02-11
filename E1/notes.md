@@ -65,7 +65,40 @@ or
 
 
 
+<div className='res-card' style={{backgroundColor: "#a0c1b9",}}></div>
 
+<RestaurantCard resName="Wraps Kathi Rolls" foodType="Rolls & Wraps, Fast Food"/>
+
+passing props to the component
+
+
+we can use inline css inside jsx also / condn has to be declared like above
+
+# Destructuring in React (Revision Notes)
+
+## 1️⃣ What is Destructuring?
+
+Destructuring is a JavaScript feature that allows you to extract values from objects or arrays and assign them to variables.
+
+In React, we mainly use destructuring with **props**.
+
+
+
+--------------------------------------------------
+
+## 2️⃣ Without Destructuring
+
+```jsx
+const RestaurantCard = (props) => {
+  return (
+    <div className="res-card">
+      <h3>{props.resName}</h3>
+      <h4>{props.rating}</h4>
+      <p>{props.foodType}</p>
+      <p>{props.address}</p>
+    </div>
+  );
+};
 
 
 
