@@ -1,4 +1,4 @@
-
+i
 In js we use document.createElement in "React" we use create.Element()
 
 createElement take 3 arguments
@@ -48,6 +48,21 @@ how to write img tag inside jsx / various attributes.
 react component 
 i> class based component (old)
 ii> functional component (new) -> majorly used.
+
+we can do either npm run dev or npm dev , both are acceptable
+but we can't do npm build we have to do npm run build.
+
+inside react transpiling is done by Parcel
+
+functional component is a normal js fucntion which returns some jsx elements.
+
+or
+
+ function returnig a jsx element is called funtional comoponent.
+
+ when using img tag use it like <img src="" className"" alt=""/>
+ not <img></img>
+
 
 
 
