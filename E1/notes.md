@@ -101,5 +101,9 @@ const RestaurantCard = (props) => {
 };
 
 
+----------------
+
+not using keys <<<<<<< index as key <<<<<< unique id
+
 
 
